@@ -8,12 +8,15 @@
 <template>
   <div id="app">
     <navbar></navbar>
-    <router-view></router-view>
+    <transition name="router">
+      <router-view :key="$route.path"></router-view>
+    </transition>
   </div>
 </template>
 
 <script>
 import navbar from './components/navbar.vue';
+
 export default {
   name: 'app',
   components: {
