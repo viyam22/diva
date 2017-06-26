@@ -7,11 +7,13 @@
   .box {
     box-sizing: border-box;
     overflow: hidden;
-    display: inline-flex;
-    position: absolute;
+    display: table;
+    margin:auto;
+    transform: translateY(50%);
+    /*position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
   }
   .info-img {
     width: 20rem;

@@ -13,7 +13,7 @@ export default new Router({
       name: 'index',
       component: index
     }, {
-      path: '/photoList',
+      path: '/photoList/:name',
       name: 'photoList',
       component: photoList
     }, {
