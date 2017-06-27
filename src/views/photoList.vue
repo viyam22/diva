@@ -3,78 +3,68 @@
     /*width: 100%;*/
     text-align: center;
   }
+  .title h1 {
+    text-transform: uppercase;
+  }
   .container {
-    display: inline-flex;
+    width: 100%;
+    padding: 0 16vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
   .box {
-    width: 14rem;
-    margin: 1.5rem;
+    width: 20vw;
   }
   .photos {
-    width: 14rem;
+    width: 20vw;
+    box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
+    margin-bottom: 40px;
   }
 </style>
 <template>
-  <div>
-    <div class="title">
-      <h1>PHOTOS</h1>
+<div>
+  <navbar></navbar>
+  <div class="title">
+    <h1>{{routeName}}</h1>
+  </div>
+  <div class="container">
+    <div class="box">
+      <img class="photos" v-for="n in photoData.left" :src="'http://oqwhnnwix.bkt.clouddn.com/' + routeName + '/left/' + n + '.jpg'">
     </div>
-
-    <div class="container">
-      <div class="box">
-        <img class="photos" src="../assets/info.jpg">
-        <img class="photos" src="../assets/info.jpg">
-        <img class="photos" src="../assets/info.jpg">
-        <img class="photos" src="../assets/info.jpg">
-      </div>
-      <div class="box">
-        <img class="photos" src="../assets/info.jpg">
-        <img class="photos" src="../assets/info.jpg">
-        <img class="photos" src="../assets/info.jpg">
-        <img class="photos" src="../assets/info.jpg">
-      </div>
-      <div class="box">
-        <img class="photos" src="../assets/info.jpg">
-        <img class="photos" src="../assets/info.jpg">
-        <img class="photos" src="../assets/info.jpg">
-        <img class="photos" src="../assets/info.jpg">
-      </div>
+    <div class="box">
+      <img class="photos" v-for="n in photoData.center" :src="'http://oqwhnnwix.bkt.clouddn.com/' + routeName + '/center/' + n + '.jpg'">
+    </div>
+    <div class="box">
+      <img class="photos" v-for="n in photoData.right" :src="'http://oqwhnnwix.bkt.clouddn.com/' + routeName + '/right/' + n + '.jpg'">
     </div>
   </div>
+</div>
 </template>
 <script type="text/javascript">
-  export default {
-    data() {
-      return {
-        photos: {
-          one: [],
-          two: [],
-          three: []
-        },
-        art: {
-          one: [],
-          two: [],
-          three: []
-        },
-        project: {
-          one: [],
-          two: [],
-          three: []
-        },
-        initData: null
-      }
+import photos from '../photos.js';
+import navbar from '../components/navbar.vue';
+export default {
+  data() {
+    return {
+    }
+  },
+  components: {
+    navbar
+  },
+  methods: {
+  },
+  computed: {
+    routeName() {
+      return this.$route.name;
     },
-
-    methods: {
-      initData() {
-        var _this = this;
-        //获取路由name
-        // _this.initData = 
-      }
-      
+    photoData() {
+      return photos[this.$route.name];
     }
   }
+}
 </script>

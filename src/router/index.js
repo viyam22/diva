@@ -12,11 +12,23 @@ export default new Router({
       path: '/',
       name: 'index',
       component: index
-    }, {
-      path: '/photoList/:name',
-      name: 'photoList',
+    }, 
+    {
+      path: '/photo',
+      name: 'photo',
       component: photoList
-    }, {
+    }, 
+    {
+      path: '/art',
+      name: 'art',
+      component: photoList
+    }, 
+    {
+      path: '/project',
+      name: 'project',
+      component: photoList
+    }, 
+    {
       path: '/info',
       name: 'info',
       component: info

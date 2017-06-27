@@ -2,7 +2,7 @@
   .container {
     background: #000;
     width: 100%;
-    height: 100%;
+    height: 92vh;
   }
   .box {
     box-sizing: border-box;
@@ -33,6 +33,8 @@
   }
 </style>
 <template>
+<div>
+  <navbar></navbar>
   <div class="container">
     <div class="box">
       <img class="info-img" src="../assets/info.jpg">
@@ -57,4 +59,13 @@
       </div>
     </div>
   </div>
+</div>
 </template>
+<script type="text/javascript">
+import navbar from '../components/navbar.vue';
+export default {
+  components: {
+    navbar
+  }
+}
+</script>
