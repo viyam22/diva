@@ -32,7 +32,7 @@
     right: 2%;
   }
   .album {
-    height: 100rem;
+    height: 40rem;
     overflow: hidden;
   }
   .album-container {
@@ -62,23 +62,23 @@
     <div class="navbar">
       <!--<router-link class="switch link" to="/" @click="switchFun">{{navTitle}}</router-link>-->
       <a class="switch link" @click="switchFun">{{navTitle}}</a>
-      <router-link class="info link" to="/info">info</router-link>
+      <router-link class="info link" to="/info"><p @click="closeAlbum">info</p></router-link>
     </div>
     
     <div class="album" v-if="hasAlbum">
-      <div class="album-container">
-        <div class="album-box">
+      <div class="album-container" @click="closeAlbum">
+        <router-link class="album-box" to="/photoList/photos">
           <img class="album-img" src="../assets/info.jpg">
           PHOTO
-        </div>
-        <div class="album-box">
+        </router-link>
+        <router-link class="album-box" to="/photoList">
           <img class="album-img" src="../assets/info.jpg">
           PHOTO
-        </div>
-        <div class="album-box">
+        </router-link>
+        <router-link class="album-box" to="/photoList">
           <img class="album-img" src="../assets/info.jpg">
           PHOTO
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
@@ -99,6 +99,11 @@
         _this.navTitle = _this.navTitle === '-----' ? 'CLOSE' : '-----';
         console.log(_this.hasAlbum);
       },
+      closeAlbum() {
+        var _this = this;
+        _this.hasAlbum = false;
+        _this.navTitle = "-----";
+      }
     }
   }
 </script>
