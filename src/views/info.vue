@@ -34,7 +34,6 @@
 </style>
 <template>
 <div>
-  <navbar></navbar>
   <div class="container">
     <div class="box">
       <img class="info-img" src="../assets/info.jpg">
@@ -62,10 +61,6 @@
 </div>
 </template>
 <script type="text/javascript">
-import navbar from '../components/navbar.vue';
 export default {
-  components: {
-    navbar
-  }
 }
 </script>
