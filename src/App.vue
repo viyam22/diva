@@ -1,4 +1,36 @@
 <style type="text/css">
+/*
+  * 屏幕高大于500px用以下css
+  */
+
+  @media screen and (min-height:501px) {
+    #app {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+
+/*  
+  * 屏幕高小于500px用以下css
+  */
+
+  @media screen and (max-height:500px) {
+    #app {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+.wrap {
+  will-change: transform;
+  transform: translateZ(0);
+  padding-top: 8vh;
+}
 #app {
   width: 100%;
   height: 100%;
@@ -45,8 +77,6 @@ div,a,img {
   }
 }
 
-
-
 </style>
 <template>
   <div id="app">
@@ -70,11 +100,6 @@ export default {
     }
   },
   watch: {
-    // '$route'(to, from) {
-    //   if (to.name !== from.name) {
-    //     this.hide = true;
-    //   }
-    // }
   },
   created() {
     BUS.$on('showAlbum',() => {

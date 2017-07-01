@@ -145,6 +145,36 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -156,13 +186,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       hide: true
     };
   },
-  watch: {
-    // '$route'(to, from) {
-    //   if (to.name !== from.name) {
-    //     this.hide = true;
-    //   }
-    // }
-  },
+  watch: {},
   created() {
     BUS.$on('showAlbum', () => {
       this.hide = !this.hide;
@@ -472,6 +496,106 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -532,14 +656,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data() {
-    return {};
+    return {
+      left: [],
+      center: [],
+      right: []
+    };
   },
-  methods: {},
+  mounted() {
+    this.pushImg();
+  },
+  methods: {
+    pushImg() {
+      var _this = this;
+      console.log(__WEBPACK_IMPORTED_MODULE_0__photos_js__["a" /* default */][this.$route.name]);
+      for (var i = 0, len = __WEBPACK_IMPORTED_MODULE_0__photos_js__["a" /* default */][this.$route.name]; i < len; i++) {
+        if (i % 3 === 0) _this.left.push(i + 1);
+        if (i % 3 === 1) _this.center.push(i + 1);
+        if (i % 3 === 2) _this.right.push(i + 1);
+      }
+      // console.log('a:', a,'b:', b, 'c:', c);
+    }
+  },
   computed: {
     routeName() {
       return this.$route.name;
@@ -583,11 +724,12 @@ new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
-  photo: {
-    left: 8,
-    center: 9,
-    right: 8
-  },
+  // photo: {
+  //   left: 8,
+  //   center: 9,
+  //   right: 8
+  // },
+  photo: 25,
   art: {},
   project: {}
 });
@@ -792,7 +934,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "photo-boxes"
   }, [_c('div', {
     staticClass: "box"
-  }, _vm._l((_vm.photoData.left), function(n) {
+  }, _vm._l((_vm.left), function(n) {
     return _c('img', {
       staticClass: "photos",
       attrs: {
@@ -801,7 +943,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     })
   })), _vm._v(" "), _c('div', {
     staticClass: "box"
-  }, _vm._l((_vm.photoData.center), function(n) {
+  }, _vm._l((_vm.center), function(n) {
     return _c('img', {
       staticClass: "photos",
       attrs: {
@@ -810,7 +952,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     })
   })), _vm._v(" "), _c('div', {
     staticClass: "box"
-  }, _vm._l((_vm.photoData.right), function(n) {
+  }, _vm._l((_vm.right), function(n) {
     return _c('img', {
       staticClass: "photos",
       attrs: {
@@ -863,7 +1005,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }), _vm._v(" "), _c('div', {
     staticClass: "content"
-  }, [_vm._v("\n        Diva.gao 高价硬"), _c('br'), _vm._v("\n        PHOTOGRAPHER / DESIGNER / PLANNER"), _c('br'), _vm._v(" "), _c('br'), _vm._v("\n        Education:"), _c('br'), _vm._v("\n        Advertising Bachelor Degree (2013 - 2017) - Jinan University (Guangzhou)"), _c('br'), _vm._v(" "), _c('br'), _vm._v("\n        Experience:"), _c('br'), _vm._v("\n        New Media Journalist - Xinhua News Agency Guangzhou"), _c('br'), _vm._v("\n        Retoucher - Veraho Production"), _c('br'), _vm._v("\n        Copy & Designer (Intern) - Utop Shanghai"), _c('br'), _vm._v("\n        Account Executive (Intern) - TBWA Shanghai"), _c('br'), _vm._v("\n        Planner (Intern) - AKQA Shanghai"), _c('br'), _vm._v(" "), _c('br'), _vm._v("\n        Contact Me:"), _c('br'), _vm._v("\n        Email: divagogogo@gmail.com"), _c('br'), _vm._v(" "), _c('img', {
+  }, [_c('span', {
+    staticClass: "text-name"
+  }, [_c('span', {
+    staticClass: "text-bold"
+  }, [_vm._v("Diva.Gao")]), _vm._v(" 高价硬")]), _c('br'), _vm._v(" "), _c('span', {
+    staticClass: "text-type"
+  }, [_vm._v("PHOTOGRAPHER / DESIGNER / PLANNER")]), _c('br'), _vm._v(" "), _c('br'), _vm._v(" "), _c('span', {
+    staticClass: "text-bold"
+  }, [_vm._v("Education:")]), _c('br'), _vm._v("Advertising Bachelor Degree (2013 - 2017) "), _c('span', {
+    staticClass: "dis-block"
+  }), _vm._v("- Jinan University (Guangzhou)"), _c('br'), _vm._v(" "), _c('br'), _vm._v(" "), _c('span', {
+    staticClass: "text-bold"
+  }, [_vm._v("Experience:")]), _c('br'), _vm._v("New Media Journalist - Xinhua News Agency Guangzhou"), _c('br'), _vm._v("Retoucher - Veraho Production"), _c('br'), _vm._v("Copy & Designer (Intern) - Utop Shanghai"), _c('br'), _vm._v("Account Executive (Intern) - TBWA Shanghai"), _c('br'), _vm._v("Planner (Intern) - AKQA Shanghai"), _c('br'), _vm._v(" "), _c('br'), _vm._v(" "), _c('span', {
+    staticClass: "text-bold"
+  }, [_vm._v("Contact Me:")]), _c('br'), _vm._v("Email: divagogogo@gmail.com"), _c('br'), _vm._v(" "), _c('img', {
     staticClass: "info-icon",
     attrs: {
       "src": __webpack_require__(24)
@@ -979,4 +1135,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ],[11]);
-//# sourceMappingURL=app.172756aebb2ac4068791.js.map
+//# sourceMappingURL=app.28a537f56664afb114c0.js.map
