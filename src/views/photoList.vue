@@ -35,13 +35,13 @@
     </div>
     <div class="photo-boxes">
       <div class="box">
-        <img class="photos" v-for="n in photoData.left" :src="'http://oqwhnnwix.bkt.clouddn.com/' + routeName + '/left/' + n + '.jpg'">
+        <img class="photos" v-for="n in left" :src="'http://oqwhnnwix.bkt.clouddn.com/' + routeName + '/left/' + n + '.jpg'">
       </div>
       <div class="box">
-        <img class="photos" v-for="n in photoData.center" :src="'http://oqwhnnwix.bkt.clouddn.com/' + routeName + '/center/' + n + '.jpg'">
+        <img class="photos" v-for="n in center" :src="'http://oqwhnnwix.bkt.clouddn.com/' + routeName + '/center/' + n + '.jpg'">
       </div>
       <div class="box">
-        <img class="photos" v-for="n in photoData.right" :src="'http://oqwhnnwix.bkt.clouddn.com/' + routeName + '/right/' + n + '.jpg'">
+        <img class="photos" v-for="n in right" :src="'http://oqwhnnwix.bkt.clouddn.com/' + routeName + '/right/' + n + '.jpg'">
       </div>
     </div>
   </div>
@@ -52,9 +52,25 @@ import photos from '../photos.js';
 export default {
   data() {
     return {
+      left : [], 
+      center : [], 
+      right : []
     }
   },
+  mounted() {
+    this.pushImg();
+  },
   methods: {
+    pushImg() {
+      var _this = this;
+      console.log(photos[this.$route.name]);
+      for(var i = 0, len = photos[this.$route.name]; i < len; i++) {
+        if(i % 3 === 0) _this.left.push(i + 1);
+        if(i % 3 === 1) _this.center.push(i + 1);
+        if(i % 3 === 2) _this.right.push(i + 1);
+      }
+      // console.log('a:', a,'b:', b, 'c:', c);
+    }
   },
   computed: {
     routeName() {
