@@ -1,35 +1,144 @@
 <style scoped type="text/css">
-  .container {
-    background: #000;
-    width: 100%;
-    height: 92vh;
+  /*@font-face {
+    font-family: DINBlackAlternate;
+    src: url('../assets/font/DINBlackAlternate.ttf');
+  }  */
+  @font-face {
+    font-family: DINBold;
+    src: url('../assets/font/DINBold.ttf');
   }
-  .box {
-    box-sizing: border-box;
-    overflow: hidden;
-    display: table;
-    margin:auto;
-    transform: translateY(50%);
-    /*position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);*/
+  /*@font-face {
+    font-family: DINLight;
+    src: url('../assets/font/DINLight.ttf');
   }
-  .info-img {
-    width: 20rem;
-    height: 20rem;
-    float: left;
+  @font-face {
+    font-family: DINLightAlternate;
+    src: url('../assets/font/DINLightAlternate.ttf');
   }
-  .content {
-    float: left;
-    margin-left: 4rem;
-    color: #fff;
+  @font-face {
+    font-family: DINMedium;
+    src: url('../assets/font/DINMedium.ttf');
   }
-  .info-icon {
-    float: left;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: 1.2rem;
+  @font-face {
+    font-family: DINMediumAlternate;
+    src: url('../assets/font/DINMediumAlternate.ttf');
+  }
+  @font-face {
+    font-family: DINRegular;
+    src: url('../assets/font/DINRegular.ttf');
+  }
+  @font-face {
+    font-family: DINRegularAlternate;
+    src: url('../assets/font/DINRegularAlternate.ttf');
+  }*/
+  
+  
+  
+  
+  
+  .text-bold {
+    font-weight: 700;
+  }
+
+  /*
+  * 屏幕宽大于800px用以下css
+  */
+
+  @media screen and (min-width:800px) {
+    .container {
+      background: #000;
+      width: 100%;
+      height: 92vh;
+    }
+    .box {
+      box-sizing: border-box;
+      overflow: hidden;
+      display: table;
+      margin:auto;
+      transform: translateY(30%);
+    }
+    .info-img {
+      width: 20rem;
+      height: 20rem;
+      float: left;
+    }
+    .content {
+      float: left;
+      font-size: 11px;
+      line-height: 16px;
+      margin-left: 4rem;
+      color: #fff;
+    }
+    .info-icon {
+      float: left;
+      width: 1.8rem;
+      height: 1.8rem;
+      margin: 0.4rem 1.2rem 0 0;
+    }
+    .text-name {
+      font-size: 24px;
+      line-height: 24px;
+      font-family: DINBold;
+    }
+    .text-type {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 28px;
+      font-family: DINBold;
+    }
+  }
+
+  /*
+  * 屏幕宽小于800px用以下css
+  */
+
+  @media screen and (max-width:800px) {
+    .container {
+      background: #000;
+      width: 100%;
+      height: 110vh;
+    }
+    .box {
+      /*width: 425px;*/
+      box-sizing: border-box;
+      overflow: hidden;
+      /*display: table;*/
+      margin:auto;
+      transform: translateY(10%);
+    }
+    .info-img {
+      width: 20vh;
+      height: 20vh;
+      margin: auto;
+      display: block;
+      
+    }
+    .content {
+      font-size: 10px;
+      line-height: 15px;
+      color: #fff;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .info-icon {
+      width: 1.8rem;
+      height: 1.8rem;
+      margin: 0.4rem 1.2rem 0 0;
+    }
+    .dis-block {
+      display: block;
+    }
+      .text-name {
+      font-size: 22px;
+      line-height: 22px;
+      font-family: DINBold;
+    }
+    .text-type {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 22px;
+      font-family: DINBold;
+    }
   }
 </style>
 <template>
@@ -38,21 +147,14 @@
     <div class="box">
       <img class="info-img" src="../assets/info.jpg">
       <div class="content">
-        Diva.gao 高价硬</br>
-        PHOTOGRAPHER / DESIGNER / PLANNER</br>
+        <span class="text-name"><span class="text-bold">Diva.Gao</span> 高价硬</span></br>
+        <span class="text-type">PHOTOGRAPHER / DESIGNER / PLANNER</span></br>
         </br>
-        Education:</br>
-        Advertising Bachelor Degree (2013 - 2017) - Jinan University (Guangzhou)</br>
+        <span class="text-bold">Education:</span></br>Advertising Bachelor Degree (2013 - 2017) <span class="dis-block"></span>- Jinan University (Guangzhou)</br>
         </br>
-        Experience:</br>
-        New Media Journalist - Xinhua News Agency Guangzhou</br>
-        Retoucher - Veraho Production</br>
-        Copy & Designer (Intern) - Utop Shanghai</br>
-        Account Executive (Intern) - TBWA Shanghai</br>
-        Planner (Intern) - AKQA Shanghai</br>
+        <span class="text-bold">Experience:</span></br>New Media Journalist - Xinhua News Agency Guangzhou</br>Retoucher - Veraho Production</br>Copy & Designer (Intern) - Utop Shanghai</br>Account Executive (Intern) - TBWA Shanghai</br>Planner (Intern) - AKQA Shanghai</br>
         </br>
-        Contact Me:</br>
-        Email: divagogogo@gmail.com</br>
+        <span class="text-bold">Contact Me:</span></br>Email: divagogogo@gmail.com</br>
         <img class="info-icon" src="../assets/weibo.png">
         <img class="info-icon" src="../assets/instagram.png">
       </div>
