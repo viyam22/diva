@@ -5,19 +5,18 @@
 }
 .album {
   width: 100%;
-  height: 92vh;
   padding: 0 10%;
+  margin-top: 30vh;
   box-sizing: border-box;
   box-sizing: border-box;
-  margin: auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
 }
 .album-box {
-  width: 20vw;
-  height: 20vw;
+  width: 18vw;
+  height: 18vw;
   text-align: center;
   line-height: 7rem;
   font-size: 1.8rem;
@@ -61,7 +60,7 @@
 </style>
 <template>
   <div class="album-wrap">
-    <div class="album" v-show="!hide">
+    <div class="album" @click="showAlbum" v-show="!hide">
       <router-link class="album-box" to="/photo">
         <div class="album-img-wrap">
           <img class="album-img" src="../assets/navbar/1.jpg">
@@ -91,6 +90,9 @@ export default {
   },
   props: ['hide'],
   methods: {
+    showAlbum() {
+      BUS.$emit('showAlbum');
+    },
   }
 
 }

@@ -9,7 +9,9 @@
     position: absolute;
     z-index: 100;
   }
-  .link {
+  .navbar a {
+    height: 8vh;
+    line-height: 8vh;
     color: #000;
     text-transform: uppercase;
     font-weight: 700;
@@ -23,6 +25,11 @@
     -ms-user-select: none;
     user-select: none;
   }
+  .index {
+    font-size: 1rem;
+    position: absolute;
+    left: 2%;
+  }
   .info {
     font-size: 1rem;
     position: absolute;
@@ -32,18 +39,50 @@
 </style>
 <template>
   <div>
-    <div class="navbar" @click="showAlbum">
-      <a class="switch link">MENU</a>
-      <router-link class="info link" to="/info">info</router-link>
+    <div class="navbar"  @click="showAlbum">
+      <a class="index" @click="toIndex">D</a>
+      <a class="switch">MENU</a>
+      <a class="info" @click="toInfo">info</a>
     </div>
   </div>
 </template>
 <script type="text/javascript">
 export default {
+  props: ['hide'],
+  watch:{
+    // '$route'(to, from) {
+    //   if (to.name === 'info' && to.name !== from.name && this.hide === true) {
+    //     setTimeout(function() {
+    //     }, 1000);
+    //   }
+    // }
+  },
   methods: {
     showAlbum() {
       BUS.$emit('showAlbum');
     },
+    toIndex() {
+      if (this.$route.name === 'index') return;
+      if (this.hide === false) {
+        this.$router.push('');
+      } else {
+        setTimeout(() => {
+          this.$router.push({name: 'index'});
+          BUS.$emit('showAlbum');
+        }, 1000);
+      }      
+    },
+    toInfo() {
+      if (this.$route.name === 'info') return;
+      if (this.hide === false) {
+        this.$router.push({name: 'info'});
+      } else {
+        setTimeout(() => {
+          this.$router.push({name: 'info'});
+          BUS.$emit('showAlbum');
+        }, 1000);
+      }
+    }
   }
 }
 </script>

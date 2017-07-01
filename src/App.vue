@@ -22,13 +22,29 @@
     }
   }
 
-/**
-*****
-**/
-
 a {
   text-decoration: none;
   color: #000;
+}
+.wrap {
+  will-change: transform;
+  transform: translateZ(0);
+  padding-top: 8vh;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+div,a,img {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select:none;
 }
 .wrap {
   will-change: transform;
@@ -64,7 +80,7 @@ a {
 </style>
 <template>
   <div id="app">
-    <navbar></navbar>
+    <navbar :hide="hide"></navbar>
     <div class="wrap" :class="{'hide':hide, 'show': !hide}">
       <album :hide="hide"></album>
       <router-view :key="$route.path"></router-view>
@@ -84,11 +100,6 @@ export default {
     }
   },
   watch: {
-    '$route'(to, from) {
-      if (to.name !== from.name) {
-        this.hide = true;
-      }
-    }
   },
   created() {
     BUS.$on('showAlbum',() => {

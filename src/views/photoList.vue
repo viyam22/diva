@@ -3,6 +3,7 @@
     width: 100%;
     height: 92vh;
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
   }
   .title {
     text-align: center;
