@@ -117,6 +117,7 @@
       color: #fff;
       text-align: center;
       margin-top: 2rem;
+      font-weight: 400;
     }
     .info-icon {
       width: 1.8rem;

@@ -1,23 +1,24 @@
 <style scoped type="text/css">
   .main {
     width: 100%;
-    height: 92vh;
+    height: 100vh;
     position: relative;
-    overflow: hidden;
   }
-  .main-bg {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    z-index: -1;
+@media screen and (min-width:800px) {
+  .main {
+    background: #000 center/100% auto url('../assets/main-web.jpg') no-repeat;
   }
+}
+
+@media screen and (max-width:800px) {
+  .main {
+    background: #000 center/100% auto url('../assets/main-mobile.jpg') no-repeat;
+  }
+}
 </style>
 <template>
   <div>
-    <div class="main">
-      <img class="main-bg" src="../assets/main-web.jpg">
-    </div>
+    <div class="main"></div>
   </div>
 </template>
 <script type="text/javascript">

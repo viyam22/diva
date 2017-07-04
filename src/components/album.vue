@@ -2,34 +2,32 @@
 .album-wrap {
   width: 100%;
   height: 92vh;
+  box-shadow: 5px 1px 0 rgba(0,0,0,.1), inset 0 0 0 rgba(0,0,0,.1);
 }
 .album {
   width: 100%;
   padding: 0 10%;
   margin-top: 30vh;
   box-sizing: border-box;
-  box-sizing: border-box;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  align-items: center;
 }
 .album-box {
-  width: 18vw;
-  height: 18vw;
+  width: 30vw;
   text-align: center;
-  line-height: 7rem;
   font-size: 1.8rem;
 }
 .album-img-wrap {
-  width: 100%;
-  height: 100%;
+  width: 18vw;
+  height: 18vw;
+  display: inline-block;
   background-color: rgba(0,0,0, 0.9);
   box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
-  animation: showImg 2s;
+  animation: showImg 2.2s;
 }
 .album-img {
-  width: 100%;
+  width: 18vw;
   display: block;
   opacity: 0.1;
   transition: opacity 1.5s
@@ -40,11 +38,10 @@
 }
 .album-box span {
   text-transform: uppercase;
-  padding-top: 1.0em;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
-  font-weight: 700;
-  animation: showImg 3s;
+  font-weight: 600;
+  animation: showImg 2.8s;
 }
 @keyframes showImg {
   0% {

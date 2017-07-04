@@ -6,6 +6,7 @@
     align-items: center;
     width: 100%;
     height: 8vh;
+    background-color: #fff;
     position: absolute;
     z-index: 100;
   }
@@ -14,7 +15,7 @@
     line-height: 8vh;
     color: #000;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
   }
   .switch {
