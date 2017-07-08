@@ -15,17 +15,19 @@
 }
 .album-box {
   width: 30vw;
-  height: 24vw;
+  height: 18vw;
   text-align: center;
   font-size: 1.8rem;
 }
 .album-img-wrap {
   width: 18vw;
   height: 18vw;
+
   display: inline-block;
-  background-color: rgba(0,0,0, 0.9);
+  background-color: #000;
+  opacity: 0.9;
+  animation: showImg 2.6s;
   box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
-  animation: showImg 2.2s;
 }
 .album-img {
   width: 18vw;
@@ -33,23 +35,31 @@
   
 
 }
-@media screen and (min-width:800px) {
-  .album-img {
-    opacity: 0.1;
-    transition: opacity 1.5s
-  }
-  .album-img:hover {
-    opacity: 0.6;
-  }
-}
-
-.album-box span {
+.album-box p {
   text-transform: uppercase;
   font-size: 16px;
   text-align: center;
   font-weight: 600;
-  animation: showImg 2.8s;
+  animation: showImg 4s;
 }
+
+@media screen and (min-width:800px) {
+  .album-img {
+    opacity: 0.1;
+    transition: opacity 1.5s;
+
+  }
+  .album-img:hover {
+    opacity: 1;
+  }
+}
+@media screen and (max-width:800px) {
+  .album-box p {
+    font-size: 14px;
+  }
+}
+
+
 @keyframes showImg {
   0% {
     opacity: 0;
@@ -58,7 +68,7 @@
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: 0.9;
   }
 }
 </style>
@@ -69,19 +79,19 @@
         <div class="album-img-wrap">
           <img class="album-img" src="../assets/navbar/1.jpg">
         </div>
-        <span>photo</span>
+        <p>photo</p>
       </router-link>
       <router-link class="album-box" to="/art">
         <div class="album-img-wrap">
           <img class="album-img" src="../assets/navbar/2.jpg">
         </div>
-        <span>art</span>
+        <p>art</p>
       </router-link>
       <router-link class="album-box" to="/project">
         <div class="album-img-wrap">
           <img class="album-img" src="../assets/navbar/3.jpg">
         </div>
-        <span>project</span>
+        <p>project</p>
       </router-link>
     </div>
   </div>

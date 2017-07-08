@@ -3,8 +3,9 @@
     width: 100%;
     height: 92vh;
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
     text-align: center;
-    margin: 20px 0;
+    padding: 20px 0;
   }
   .photoIndex > img {
     width: 80%;

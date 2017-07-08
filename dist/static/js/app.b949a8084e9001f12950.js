@@ -311,6 +311,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data() {
@@ -597,6 +607,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -1303,7 +1314,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "src": __webpack_require__(26)
     }
-  })]), _vm._v(" "), _c('span', [_vm._v("photo")])]), _vm._v(" "), _c('router-link', {
+  })]), _vm._v(" "), _c('p', [_vm._v("photo")])]), _vm._v(" "), _c('router-link', {
     staticClass: "album-box",
     attrs: {
       "to": "/art"
@@ -1315,7 +1326,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "src": __webpack_require__(27)
     }
-  })]), _vm._v(" "), _c('span', [_vm._v("art")])]), _vm._v(" "), _c('router-link', {
+  })]), _vm._v(" "), _c('p', [_vm._v("art")])]), _vm._v(" "), _c('router-link', {
     staticClass: "album-box",
     attrs: {
       "to": "/project"
@@ -1327,7 +1338,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "src": __webpack_require__(28)
     }
-  })]), _vm._v(" "), _c('span', [_vm._v("project")])])], 1)])
+  })]), _vm._v(" "), _c('p', [_vm._v("project")])])], 1)])
 },staticRenderFns: []}
 
 /***/ }),
@@ -1359,4 +1370,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ],[13]);
-//# sourceMappingURL=app.0d8e362e4f75fa8ccc71.js.map
+//# sourceMappingURL=app.b949a8084e9001f12950.js.map
