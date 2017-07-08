@@ -1,9 +1,7 @@
 <style type="text/css">
 @font-face {
   font-family: DINBold;
-  src: url('./assets/font/DINBold.svg'),
-       url('./assets/font/DINBold.woff'),
-       url('./assets/font/DINBold.eot');
+  src: url('./assets/font/DINBold.woff');
 }
 html {
   font-size: .9em;

@@ -8,7 +8,7 @@
     height: 8vh;
     background-color: #fff;
     position: absolute;
-    z-index: 100;
+    z-index: 100; 
   }
   .navbar a {
     height: 8vh;
