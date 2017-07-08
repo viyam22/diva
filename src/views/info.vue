@@ -34,6 +34,7 @@
       line-height: 16px;
       margin-left: 4rem;
       color: #fff;
+      z-index: 999;
     }
     .info-icon {
       float: left;

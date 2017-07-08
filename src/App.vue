@@ -1,10 +1,14 @@
 <style type="text/css">
 @font-face {
   font-family: DINBold;
-  src: url('./assets/font/DINBold.ttf');
+  src: url('./assets/font/DINBold.ttf'),
+       url('./assets/font/DINBold.svg'),
+       url('./assets/font/DINBold.woff'),
+       url('./assets/font/DINBold.eot');
 }
 html {
-  font-family: DINBold,Futura,MeiHei,Helvetica,Arial,sans-serif;
+  font-family: DINBold, Futura, MeiHei, Helvetica, Arial, sans-serif;
+  font-family:Helvetica;
   font-size: .9em;
 }
 html,body {
