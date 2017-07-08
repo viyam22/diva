@@ -1,37 +1,4 @@
 <style scoped type="text/css">
-  /*@font-face {
-    font-family: DINBlackAlternate;
-    src: url('../assets/font/DINBlackAlternate.ttf');
-  }  */
-  @font-face {
-    font-family: DINBold;
-    src: url('../assets/font/DINBold.ttf');
-  }
-  /*@font-face {
-    font-family: DINLight;
-    src: url('../assets/font/DINLight.ttf');
-  }
-  @font-face {
-    font-family: DINLightAlternate;
-    src: url('../assets/font/DINLightAlternate.ttf');
-  }
-  @font-face {
-    font-family: DINMedium;
-    src: url('../assets/font/DINMedium.ttf');
-  }
-  @font-face {
-    font-family: DINMediumAlternate;
-    src: url('../assets/font/DINMediumAlternate.ttf');
-  }
-  @font-face {
-    font-family: DINRegular;
-    src: url('../assets/font/DINRegular.ttf');
-  }
-  @font-face {
-    font-family: DINRegularAlternate;
-    src: url('../assets/font/DINRegularAlternate.ttf');
-  }*/
-  
   
   
   

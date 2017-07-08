@@ -3,10 +3,12 @@
     width: 100%;
     height: 92vh;
     overflow: scroll;
+    text-align: center;
+    margin: 20px 0;
   }
   .photoIndex > img {
-    width: 100%;
-
+    width: 80%;
+    margin-bottom: 10px;
   }
 </style>
 <template>

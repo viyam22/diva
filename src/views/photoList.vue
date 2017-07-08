@@ -1,23 +1,51 @@
 <style scoped type="text/css">
-  .container {
-    width: 100%;
-    height: 92vh;
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
-  }
-  .title {
-    text-align: center;
-  }
+.container {
+  width: 100%;
+  height: 92vh;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.title {
+  text-align: center;
+}
+.title h1 {
+  text-transform: uppercase;
+}
+.photo-boxes {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+image[lazy=loading] {
+width: 20vw;
+height: 20vw;
+margin-bottom: 40px;
+}
+@media screen and (min-width:600px) {
   .title h1 {
-    text-transform: uppercase;
+    font-size: 26px;
   }
   .photo-boxes {
-    width: 100%;
-    padding: 0 16vw;
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    padding: 0 18vw;
+  }
+  .box {
+    width: 18vw;
+  }
+  .photos {
+    width: 18vw;
+    box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
+    margin-bottom: 40px;
+  }
+
+}
+@media screen and (max-width:600px) {
+  .title h1 {
+    font-size: 24px;
+  }
+  .photo-boxes {
+    padding: 0 13vw;
   }
   .box {
     width: 20vw;
@@ -25,12 +53,8 @@
   .photos {
     width: 20vw;
     box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
-  image[lazy=loading] {
-  width: 20vw;
-  height: 20vw;
-  margin-bottom: 40px;
 }
 </style>
 <template>

@@ -15,6 +15,7 @@
 }
 .album-box {
   width: 30vw;
+  height: 24vw;
   text-align: center;
   font-size: 1.8rem;
 }
@@ -29,13 +30,19 @@
 .album-img {
   width: 18vw;
   display: block;
-  opacity: 0.1;
-  transition: opacity 1.5s
+  
 
 }
-.album-img:hover {
-  opacity: 0.6;
+@media screen and (min-width:800px) {
+  .album-img {
+    opacity: 0.1;
+    transition: opacity 1.5s
+  }
+  .album-img:hover {
+    opacity: 0.6;
+  }
 }
+
 .album-box span {
   text-transform: uppercase;
   font-size: 16px;
@@ -72,7 +79,7 @@
       </router-link>
       <router-link class="album-box" to="/project">
         <div class="album-img-wrap">
-          <img class="album-img" src="../assets/navbar/2.jpg">
+          <img class="album-img" src="../assets/navbar/3.jpg">
         </div>
         <span>project</span>
       </router-link>

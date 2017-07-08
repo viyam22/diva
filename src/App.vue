@@ -1,9 +1,24 @@
 <style type="text/css">
+@font-face {
+  font-family: DINBold;
+  src: url('./assets/font/DINBold.ttf');
+}
+html {
+  font-family: DINBold,Futura,MeiHei,Helvetica,Arial,sans-serif;
+  font-size: .9em;
+}
+html,body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  /*overflow: hidden;*/
+}
+
 /*
   * 屏幕高大于500px用以下css
   */
 
-  @media screen and (min-height:501px) {
+  @media screen and (min-height:600px) {
     #app {
       width: 100%;
       height: 100%;
@@ -15,7 +30,7 @@
   * 屏幕高小于500px用以下css
   */
 
-  @media screen and (max-height:500px) {
+  @media screen and (max-height:600px) {
     #app {
       width: 100%;
       height: 100%;
