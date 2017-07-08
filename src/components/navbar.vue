@@ -19,6 +19,7 @@
     text-decoration: none;
   }
   .switch {
+    
     font-size: 1.2rem;
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
