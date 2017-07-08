@@ -1,5 +1,6 @@
 <style type="text/css" scoped>
   .navbar {
+    font-family: DINBold, Futura, MeiHei, Helvetica, Arial, sans-serif;
     box-shadow: 0 1px 5px rgba(0,0,0,.1), inset 0 0 0 rgba(0,0,0,.1);
     display: flex;
     justify-content: center;
