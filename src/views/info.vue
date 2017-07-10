@@ -16,12 +16,15 @@
       background: #000;
       width: 100%;
       height: 92vh;
+      position: relative;
     }
     .box {
       box-sizing: border-box;
       display: table;
-      margin:auto;
-      transform: translateY(30%);
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
     }
     .info-img {
       width: 20rem;

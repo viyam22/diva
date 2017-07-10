@@ -23,11 +23,16 @@
 <template>
   <div>
     <div class="main">
-      <div></div>
+      <div @click="showAlbum"></div>
     </div>
   </div>
 </template>
 <script type="text/javascript">
 export default {
+  methods: {
+    showAlbum() {
+      BUS.$emit('showAlbum');
+    },
+  },
 }
 </script>

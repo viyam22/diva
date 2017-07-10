@@ -4,37 +4,9 @@
   height: 92vh;
   box-shadow: 5px 1px 0 rgba(0,0,0,.1), inset 0 0 0 rgba(0,0,0,.1);
 }
-.album {
-  width: 100%;
-  padding: 0 10%;
-  margin-top: 30vh;
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-}
-.album-box {
-  width: 30vw;
-  height: 18vw;
-  text-align: center;
-  font-size: 1.8rem;
-}
-.album-img-wrap {
-  width: 18vw;
-  height: 18vw;
 
-  display: inline-block;
-  background-color: #000;
-  opacity: 0.9;
-  animation: showImg 1.6s;
-  box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
-}
-.album-img {
-  width: 18vw;
-  display: block;
-  
 
-}
+
 .album-box p {
   text-transform: uppercase;
   font-size: 16px;
@@ -44,7 +16,34 @@
 }
 
 @media screen and (min-width:800px) {
+  .album {
+    width: 100%;
+    padding: 0 10%;
+    margin-top: 30vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+  .album-box {
+    width: 30vw;
+    height: 18vw;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .album-img-wrap {
+    width: 18vw;
+    height: 18vw;
+    cursor: pointer;
+    display: inline-block;
+    background-color: #000;
+    opacity: 0.9;
+    animation: showImg 1.6s;
+    box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
+  }
   .album-img {
+    width: 18vw;
+    display: block;
     opacity: 0.1;
     transition: opacity 1.5s;
   }
@@ -53,8 +52,34 @@
   }
 }
 @media screen and (max-width:800px) {
+  .album {
+    margin-top: 10vh;
+    
+    /*flex-flow: row nowrap;*/
+    justify-content: space-around;
+  }
+  .album-box {
+    font-size: 1.8rem;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    box-sizing: border-box;
+    width: 25vw;
+  }
+  .album-img-wrap {
+    width: 25vw;
+    height: 25vw;
+    cursor: pointer;
+    animation: showImg 1.6s;
+    box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
+    /*display: block;*/
+  }
+  .album-img {
+    width: 25vw;
+  }
   .album-box p {
-    font-size: 14px;
+    font-size: 1rem;
+    
   }
 }
 
