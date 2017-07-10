@@ -13,29 +13,11 @@ html,body {
   width: 100%;
   /*overflow: hidden;*/
 }
-
-/*
-  * 屏幕高大于500px用以下css
-  */
-
-  @media screen and (min-height:600px) {
-    #app {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-  }
-
-/*  
-  * 屏幕高小于500px用以下css
-  */
-
-  @media screen and (max-height:600px) {
-    #app {
-      width: 100%;
-      height: 100%;
-    }
-  }
+#app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
 a {
   text-decoration: none;
@@ -45,11 +27,6 @@ a {
   will-change: transform;
   transform: translateZ(0);
   padding-top: 8vh;
-}
-#app {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 }
 a {
   text-decoration: none;
@@ -67,11 +44,11 @@ div,a,img {
   padding-top: 8vh;
 }
 .hide {
-  animation: dropdown 1s;
+  animation: dropdown 1.4s;
   transform: translateY(-92vh);
 }
 .show {
-  animation: rollback 1s;
+  animation: rollback 1.4s;
   transform: translateY(0);
 }
 
@@ -97,7 +74,7 @@ div,a,img {
   <div id="app">
     <navbar :hide="hide"></navbar>
     <div class="wrap" :class="{'hide':hide, 'show': !hide}">
-      <album :hide="hide"></album>
+      <album :routenochange="routenochange" :hide="hide"></album>
       <router-view :key="$route.path"></router-view>
     </div>
   </div>
@@ -112,14 +89,30 @@ export default {
   data() {
     return {
       hide : true,
+      routenochange: true
     }
   },
   watch: {
+    // '$route'(to, from) {
+    //   console.log(from.name, to.name, this.routenochange);
+    //   if (to.name !== from.name) {
+    //     this.routenochange = false;
+    //     setTimeout(() => {
+    //         this.routenochange = true;
+    //         console.log('fuck' ,from.name, to.name, this.routenochange);
+
+    //     }, 1000);
+    //     console.log('fuck2' ,from.name, to.name, this.routenochange);
+    //   }
+    // }
   },
   created() {
     BUS.$on('showAlbum',() => {
       this.hide = !this.hide;
     });
+    BUS.$on('routeChange', (data) => {
+      this.routenochange = data;
+    })
   },
   components: {
     navbar,

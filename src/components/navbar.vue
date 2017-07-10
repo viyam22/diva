@@ -43,7 +43,7 @@
 <template>
   <div>
     <div class="navbar"  @click="showAlbum">
-      <a class="index" @click="toIndex">D</a>
+      <a class="index" @click="toIndex">HOME</a>
       <a class="switch">MENU</a>
       <a class="info" @click="toInfo">info</a>
     </div>
@@ -52,14 +52,14 @@
 <script type="text/javascript">
 export default {
   props: ['hide'],
-  watch:{
-    // '$route'(to, from) {
-    //   if (to.name === 'info' && to.name !== from.name && this.hide === true) {
-    //     setTimeout(function() {
-    //     }, 1000);
-    //   }
-    // }
-  },
+  // watch:{
+  //   '$route'(to, from) {
+  //     if (to.name === 'info' && to.name !== from.name) {
+  //       setTimeout(function() {
+  //       }, 1000);
+  //     }
+  //   }
+  // },
   methods: {
     showAlbum() {
       BUS.$emit('showAlbum');
@@ -69,7 +69,9 @@ export default {
       if (this.hide === false) {
         this.$router.push('');
       } else {
+        BUS.$emit('routeChange', false);
         setTimeout(() => {
+          BUS.$emit('routeChange', true);
           this.$router.push({name: 'index'});
           BUS.$emit('showAlbum');
         }, 1000);
@@ -79,8 +81,11 @@ export default {
       if (this.$route.name === 'info') return;
       if (this.hide === false) {
         this.$router.push({name: 'info'});
+
       } else {
+        BUS.$emit('routeChange', false);
         setTimeout(() => {
+          BUS.$emit('routeChange', true);
           this.$router.push({name: 'info'});
           BUS.$emit('showAlbum');
         }, 1000);

@@ -5,10 +5,16 @@ export default {
       {
         name: 'left/1',
         length: 2,
+        vidio: true,
+        description: {
+          name: 'experience',
+          value: 'spoken or written representation or account of a person, object, or experience experience experiencea spoken or written representation or account of a person, object, or event.'
+        }
       },
       {
         name: 'left/2',
         length: 2,
+        vidio: true
       },
       {
         name: 'left/3',

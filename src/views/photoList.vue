@@ -28,7 +28,7 @@ margin-bottom: 40px;
     font-size: 26px;
   }
   .photo-boxes {
-    padding: 0 18vw;
+    padding: 0 20vw;
   }
   .box {
     width: 18vw;
@@ -45,7 +45,7 @@ margin-bottom: 40px;
     font-size: 24px;
   }
   .photo-boxes {
-    padding: 0 13vw;
+    padding: 0 14vw;
   }
   .box {
     width: 20vw;
@@ -65,17 +65,17 @@ margin-bottom: 40px;
     </div>
     <div class="photo-boxes">
       <div class="box">
-        <router-link v-for="item in photoData.left" :to="{name: 'photoindex', params: {name: item.name, length: 2}}">
+        <router-link v-for="(item, index) in photoData.left" :to="{name: 'photoindex', params: {name: routeName, position: 'left', n: index}}">
           <img class="photos" v-lazy="photoData.url + routeName + '/' + item.name + '.jpg'">
         </router-link>
       </div>
       <div class="box">
-        <router-link v-for="item in photoData.center" :to="{name: 'photoindex', params: {name: item.name, length: 2}}">
+        <router-link v-for="(item, index) in photoData.center" :to="{name: 'photoindex', params: {name: routeName, position: 'center', n: index+1}}">
           <img class="photos" v-lazy="photoData.url + routeName + '/' + item.name + '.jpg'">
         </router-link>
       </div>
       <div class="box">
-        <router-link v-for="item in photoData.right" :to="{name: 'photoindex', params: {name: item.name, length: 2}}">
+        <router-link v-for="(item, index) in photoData.right" :to="{name: 'photoindex', params: {name: routeName, position: 'right', n: index}}">
           <img class="photos" v-lazy="photoData.url + routeName + '/' +  item.name + '.jpg'">
         </router-link>
       </div>

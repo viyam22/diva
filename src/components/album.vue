@@ -26,7 +26,7 @@
   display: inline-block;
   background-color: #000;
   opacity: 0.9;
-  animation: showImg 2.6s;
+  animation: showImg 1.6s;
   box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
 }
 .album-img {
@@ -40,14 +40,13 @@
   font-size: 16px;
   text-align: center;
   font-weight: 600;
-  animation: showImg 4s;
+  animation: showImg 3s;
 }
 
 @media screen and (min-width:800px) {
   .album-img {
     opacity: 0.1;
     transition: opacity 1.5s;
-
   }
   .album-img:hover {
     opacity: 1;
@@ -75,19 +74,19 @@
 <template>
   <div class="album-wrap">
     <div class="album" @click="showAlbum" v-show="!hide">
-      <router-link class="album-box" to="/photo">
+      <router-link v-show="routenochange" class="album-box" to="/photo">
         <div class="album-img-wrap">
           <img class="album-img" src="../assets/navbar/1.jpg">
         </div>
         <p>photo</p>
       </router-link>
-      <router-link class="album-box" to="/art">
+      <router-link v-show="routenochange" class="album-box" to="/art">
         <div class="album-img-wrap">
           <img class="album-img" src="../assets/navbar/2.jpg">
         </div>
         <p>art</p>
       </router-link>
-      <router-link class="album-box" to="/project">
+      <router-link v-show="routenochange" class="album-box" to="/project">
         <div class="album-img-wrap">
           <img class="album-img" src="../assets/navbar/3.jpg">
         </div>
@@ -98,11 +97,7 @@
 </template>
 <script type="text/javascript">
 export default {
-  data() {
-    return {
-    }
-  },
-  props: ['hide'],
+  props: ['hide', 'routenochange'],
   methods: {
     showAlbum() {
       BUS.$emit('showAlbum');

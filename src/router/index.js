@@ -35,7 +35,7 @@ export default new Router({
       component: info
     },
     {
-      path: '/photoindex/:name/:length',
+      path: '/photoindex/:name/:position/:n',
       name: 'photoindex',
       component: photoIndex
     }
