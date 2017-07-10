@@ -42,6 +42,19 @@
     margin: 0 auto 10px;
   }
 }
+.video-wrap, .video-player, video-js {
+  width:100%;
+  position:relative;
+  padding-bottom:56.25%;
+  height: 0;
+}
+.video-wrap video{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
 </style>
 <template>
   <div class="photoIndex">
