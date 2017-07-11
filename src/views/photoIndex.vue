@@ -48,7 +48,7 @@
     margin: 0 auto 10px;
   }
 }
-.video-wrap, .video-player, video-js {
+.video-wrap, .video-player, .video-js {
   width:100%;
   position:relative;
   padding-bottom:56.25%;
