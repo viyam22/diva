@@ -49,11 +49,11 @@
   }
   @keyframes floatCenter {
     0% {
-      transform: translate(-50%, -50%) translateY(-20vh);
+      top: 40%;
       opacity: 0;
-    }
+    } 
     100% {
-      transform: translate(-50%, -50%) translateY(0);
+      top: 50%;
       opacity: 1;
     }
   }
