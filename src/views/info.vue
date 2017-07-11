@@ -125,8 +125,8 @@
         <span class="text-bold">Experience:</span></br>New Media Journalist - Xinhua News Agency Guangzhou</br>Retoucher - Veraho Production</br>Copy & Designer (Intern) - Utop Shanghai</br>Account Executive (Intern) - TBWA Shanghai</br>Planner (Intern) - AKQA Shanghai</br>
         </br>
         <span class="text-bold">Contact Me:</span></br>Email: divagogogo@gmail.com</br>
-        <img class="info-icon" src="../assets/weibo.png">
-        <img class="info-icon" src="../assets/instagram.png">
+        <a href="http://weibo.com/divago/home"><img class="info-icon" src="../assets/weibo.png"></a>
+        <a href="https://www.instagram.com/lovedivago/"><img class="info-icon" src="../assets/instagram.png"></a>
       </div>
     </div>
   </div>

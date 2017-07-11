@@ -3,32 +3,82 @@
     width: 100%;
     height: 92vh;
     overflow: scroll;
+    position: relative;
+    background-color: #000;
   }
-@media screen and (min-width:800px) {
-  .main > div {
-    width: 100%;
-    padding-bottom: 66%;
-    background: #000 center top/100% auto url('../assets/main-web.jpg') no-repeat;
+  .main-text {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
   }
-}
+  @media screen and (min-width:800px) {
+    .main-bg {
+      width: 100%;
+      padding-bottom: 66%;
+      background: #000 center top/100% auto url('../assets/main-web.jpg') no-repeat;
+    }
+    .main-text {
+      text-align: center;
+      font-size: 1.8rem;
 
-@media screen and (max-width:800px) {
-  .main > div {
-    width: 100%;
-    padding-bottom: 176%;
-    background: #000 top/100% auto url('../assets/main-mobile.jpg') no-repeat;
+    }
   }
-}
+
+  @media screen and (max-width:800px) {
+    .main-bg {
+      width: 100%;
+      padding-bottom: 176%;
+      background: #000 top/100% auto url('../assets/main-mobile.jpg') no-repeat;
+    }
+    .main-text {
+      width: 100%;  
+      text-indent: 10%;
+      text-align: left;
+      font-size: 1.3rem;
+    }
+  }
+
+  .to-center {
+    display: block;
+    opacity: 1;
+    animation: floatCenter 1.4s;
+  }
+  @keyframes floatCenter {
+    0% {
+      transform: translate(-50%, -50%) translateY(-20vh);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -50%) translateY(0);
+      opacity: 1;
+    }
+  }
+
 </style>
 <template>
   <div>
     <div class="main">
-      <div @click="showAlbum"></div>
+      <div class="main-bg" @click="showText=!showText">
+        <div class="main-text" :class="{'to-center': showText}" @click="showAlbum">
+          <p>Time flies and my roles may change.</p>
+          <p>Yet my life time goal will always be the same.</p>
+          <p>All I wanna do is to witness, record and feel,</p>
+          <p>that every single moment in your life is real.</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script type="text/javascript">
 export default {
+  data() {
+    return {
+      showText: false
+    }
+  },
   methods: {
     showAlbum() {
       BUS.$emit('showAlbum');

@@ -18,6 +18,7 @@
     text-transform: uppercase;
     font-weight: 600;
     text-decoration: none;
+    cursor: pointer;
   }
   .switch {
     

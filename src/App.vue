@@ -4,7 +4,7 @@
   src: url('./assets/font/DINBold.woff');
 }
 html {
-  font-size: .9em;
+  font-size: 62.5%;
 }
 html,body {
   font-family: DINBold, Futura, MeiHei, Helvetica, Arial, sans-serif;

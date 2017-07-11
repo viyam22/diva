@@ -8,7 +8,9 @@
 .title {
   text-align: center;
 }
-.title h1 {
+.title h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
 }
 .photo-boxes {
@@ -22,6 +24,9 @@ image[lazy=loading] {
 width: 20vw;
 height: 20vw;
 margin-bottom: 40px;
+}
+.box a {
+  cursor: pointer;
 }
 @media screen and (min-width:600px) {
   .title h1 {
@@ -45,7 +50,7 @@ margin-bottom: 40px;
     font-size: 24px;
   }
   .photo-boxes {
-    padding: 0 14vw;
+    padding: 0 16vw;
   }
   .box {
     width: 20vw;
@@ -61,23 +66,23 @@ margin-bottom: 40px;
 <div>
   <div class="container">
     <div class="title">
-      <h1>{{routeName}}</h1>
+      <h2>{{routeName}}</h2>
     </div>
     <div class="photo-boxes">
       <div class="box">
-        <router-link v-for="(item, index) in photoData.left" :to="{name: 'photoindex', params: {name: routeName, position: 'left', n: index}}">
+        <a v-for="(item, index) in photoData.left" @click="toIndex('left', index)">
           <img class="photos" v-lazy="photoData.url + routeName + '/' + item.name + '.jpg'">
-        </router-link>
+        </a>
       </div>
       <div class="box">
-        <router-link v-for="(item, index) in photoData.center" :to="{name: 'photoindex', params: {name: routeName, position: 'center', n: index+1}}">
+        <a v-for="(item, index) in photoData.center" @click="toIndex('center', index)">
           <img class="photos" v-lazy="photoData.url + routeName + '/' + item.name + '.jpg'">
-        </router-link>
+        </a>
       </div>
       <div class="box">
-        <router-link v-for="(item, index) in photoData.right" :to="{name: 'photoindex', params: {name: routeName, position: 'right', n: index}}">
+        <a v-for="(item, index) in photoData.right" @click="toIndex('right', index)">
           <img class="photos" v-lazy="photoData.url + routeName + '/' +  item.name + '.jpg'">
-        </router-link>
+        </a>
       </div>
     </div>
   </div>
@@ -90,13 +95,25 @@ export default {
     return {
     }
   },
+  props: ['hide'],
   computed: {
     routeName() {
       return this.$route.name;
     },
     photoData() {
       return photos[this.$route.name];
-    }
+    },
+  },
+  methods: {
+    toIndex(position, index) {
+      BUS.$emit('routeChange', false);
+      BUS.$emit('showAlbum');
+      setTimeout(() => {
+        BUS.$emit('routeChange', true);
+        this.$router.push({name: 'photoindex', params: {name: this.routeName, position: position, n: index}});
+        BUS.$emit('showAlbum');
+      }, 1000);    
+    },
   }
 }
 </script>

@@ -1,4 +1,10 @@
 <style type="text/css">
+  .photoIndex > h2 {
+    text-transform: uppercase;
+  }
+  .description > p {
+    margin: 0;
+  }
 @media screen and (min-width:600px) {
   .photoIndex {
     width: 100%;
@@ -48,7 +54,7 @@
   padding-bottom:56.25%;
   height: 0;
 }
-.video-wrap video{
+.video-wrap video {
     position: absolute;
     top:0;
     left: 0;
@@ -60,7 +66,7 @@
   <div class="photoIndex">
     <h2>{{$route.params.name}}</h2>
     <div class="description">
-      <h3>{{photoData.description.name}}:</h3>
+      <p>{{photoData.description.name}}:</p>
       <p>{{photoData.description.value}}</p>
     </div>
     <div class="video-wrap">

@@ -18,7 +18,7 @@
 @media screen and (min-width:800px) {
   .album {
     width: 100%;
-    padding: 0 10%;
+    padding: 0 14%;
     margin-top: 30vh;
     box-sizing: border-box;
     display: flex;
