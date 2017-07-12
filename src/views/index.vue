@@ -14,11 +14,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
+    font-weight: lighter;
+    font-size: 1rem;
   }
   @media screen and (min-width:800px) {
-    .main-bg {
+    .main-content {
       width: 100%;
       padding-bottom: 66%;
+    }
+    .main-bg {
       background: #000 center top/100% auto url('../assets/main-web.jpg') no-repeat;
     }
     .main-text {
@@ -29,15 +33,16 @@
   }
 
   @media screen and (max-width:800px) {
-    .main-bg {
+    .main-content {
       width: 100%;
       padding-bottom: 176%;
+    }
+    .main-bg {
       background: #000 top/100% auto url('../assets/main-mobile.jpg') no-repeat;
     }
     .main-text {
       width: 100%;  
-      text-indent: 10%;
-      text-align: left;
+      text-align: center;
       font-size: 1.3rem;
     }
   }
@@ -62,12 +67,12 @@
 <template>
   <div>
     <div class="main">
-      <div class="main-bg" @click="showText=!showText">
-        <div class="main-text" :class="{'to-center': showText}" @click="showAlbum">
+      <div class="main-content" :class="{'main-bg': !showText}" @click="showText=!showText">
+        <div class="main-text" :class="{'to-center': showText}" @click.stop.capture="showAlbum">
           <p>Time flies and my roles may change.</p>
-          <p>Yet my life time goal will always be the same.</p>
-          <p>All I wanna do is to witness, record and feel,</p>
-          <p>that every single moment in your life is real.</p>
+          <p>Yet my life time goal will always be the same</p>
+          <p>All I wanna do is to witness, record and feel</p>
+          <p>that every single moment in your life is real</p>
         </div>
       </div>
     </div>
@@ -83,7 +88,10 @@ export default {
   methods: {
     showAlbum() {
       BUS.$emit('showAlbum');
-    },
+      setTimeout(()=>{
+        this.showText = !this.showText;
+      }, 1500);
+    }
   },
 }
 </script>

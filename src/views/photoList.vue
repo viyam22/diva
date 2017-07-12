@@ -53,12 +53,12 @@ margin-bottom: 40px;
     padding: 0 16vw;
   }
   .box {
-    width: 20vw;
+    width: 21vw;
   }
   .photos {
-    width: 20vw;
+    width: 21vw;
     box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
-    margin-bottom: 20px;
+    margin-bottom: 8px;
   }
 }
 </style>

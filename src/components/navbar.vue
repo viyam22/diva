@@ -11,6 +11,12 @@
     position: absolute;
     z-index: 100; 
   }
+
+  @media screen and (min-width:800px) {
+    .switch {
+      font-size: 1.7rem !important;
+    }
+  }
   .navbar a {
     height: 8vh;
     line-height: 8vh;
@@ -75,7 +81,7 @@ export default {
           BUS.$emit('routeChange', true);
           this.$router.push({name: 'index'});
           BUS.$emit('showAlbum');
-        }, 1000);
+        }, 1400);
       }      
     },
     toInfo() {
@@ -89,7 +95,7 @@ export default {
           BUS.$emit('routeChange', true);
           this.$router.push({name: 'info'});
           BUS.$emit('showAlbum');
-        }, 1000);
+        }, 1400);
       }
     }
   }

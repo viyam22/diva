@@ -15,9 +15,16 @@
     padding: 40px 22%;
     box-sizing: border-box;
   }
+  .photoIndex > h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
   .description {
     text-align: left;
     margin-bottom: 30px;
+  }
+  .description > p {
+    font-size: 1.6rem;
   }
   .photoIndex > img,
   .photoIndex > .video-wrap {

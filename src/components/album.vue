@@ -53,9 +53,9 @@
 }
 @media screen and (max-width:800px) {
   .album {
-    margin-top: 10vh;
-    
-    /*flex-flow: row nowrap;*/
+    margin-top: 15vh;
+    height: 92vh;
+    flex-flow: column nowrap;
     justify-content: space-around;
   }
   .album-box {
@@ -65,6 +65,7 @@
     margin: auto;
     box-sizing: border-box;
     width: 25vw;
+    margin-bottom: 1rem;
   }
   .album-img-wrap {
     width: 25vw;

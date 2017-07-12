@@ -44,11 +44,11 @@ div,a,img {
   padding-top: 8vh;
 }
 .hide {
-  animation: dropdown 1.4s;
+  animation: dropdown 1.8s;
   transform: translateY(-92vh);
 }
 .show {
-  animation: rollback 1.4s;
+  animation: rollback 1.8s;
   transform: translateY(0);
 }
 
