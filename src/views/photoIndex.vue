@@ -24,7 +24,8 @@
     margin-bottom: 30px;
   }
   .description > p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 100;
   }
   .photoIndex > img,
   .photoIndex > .video-wrap {

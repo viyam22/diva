@@ -64,19 +64,19 @@
     display: block;
     margin: auto;
     box-sizing: border-box;
-    width: 25vw;
+    width: 26vw;
     margin-bottom: 1rem;
   }
   .album-img-wrap {
-    width: 25vw;
-    height: 25vw;
+    width: 26vw;
+    height: 26vw;
     cursor: pointer;
     animation: showImg 1.6s;
     box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
     /*display: block;*/
   }
   .album-img {
-    width: 25vw;
+    width: 26vw;
   }
   .album-box p {
     font-size: 1rem;

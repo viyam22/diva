@@ -10,7 +10,6 @@
 }
 .title h2 {
   font-size: 2rem;
-  margin-bottom: 2rem;
   text-transform: uppercase;
 }
 .photo-boxes {
@@ -29,25 +28,26 @@ margin-bottom: 40px;
   cursor: pointer;
 }
 @media screen and (min-width:600px) {
-  .title h1 {
+  .title h2 {
     font-size: 26px;
+    margin-bottom: 3rem;
   }
   .photo-boxes {
-    padding: 0 20vw;
+    padding: 0 21vw;
   }
   .box {
     width: 18vw;
   }
   .photos {
     width: 18vw;
-    box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
-    margin-bottom: 40px;
+    box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.10);
+    margin-bottom: 20px;
   }
 
 }
 @media screen and (max-width:600px) {
-  .title h1 {
-    font-size: 24px;
+  .title h2 {
+    font-size: 22px;
   }
   .photo-boxes {
     padding: 0 16vw;
@@ -57,7 +57,7 @@ margin-bottom: 40px;
   }
   .photos {
     width: 21vw;
-    box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.10);
     margin-bottom: 8px;
   }
 }
