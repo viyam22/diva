@@ -53,7 +53,7 @@
 }
 @media screen and (max-width:800px) {
   .album {
-    margin-top: 15vh;
+    margin-top: 10vh;
     height: 92vh;
     flex-flow: column nowrap;
     justify-content: space-around;
@@ -64,19 +64,19 @@
     display: block;
     margin: auto;
     box-sizing: border-box;
-    width: 26vw;
+    width: 28vw;
     margin-bottom: 1rem;
   }
   .album-img-wrap {
-    width: 26vw;
-    height: 26vw;
+    width: 28vw;
+    height: 28vw;
     cursor: pointer;
     animation: showImg 1.6s;
     box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.19);
     /*display: block;*/
   }
   .album-img {
-    width: 26vw;
+    width: 28vw;
   }
   .album-box p {
     font-size: 1rem;
